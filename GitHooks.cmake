@@ -30,12 +30,6 @@ if(NOT EXISTS ${PROJECT_SOURCE_DIR}/.clang-format)
     configure_file(${CMAKE_CURRENT_LIST_DIR}/_clang-format ${PROJECT_SOURCE_DIR}/.clang-format COPYONLY)
 endif()
 
-# setup conanfile.py
-if(NOT EXISTS ${PROJECT_SOURCE_DIR}/conanfile.py)
-    message(STATUS "installing conanfile.py...")
-    configure_file(${CMAKE_CURRENT_LIST_DIR}/conanfile.py ${PROJECT_SOURCE_DIR}/conanfile.py COPYONLY)
-endif()
-
 # setup .gitignore
 if(NOT EXISTS ${PROJECT_SOURCE_DIR}/.gitignore)
     message(STATUS "installing .gitignore for C++ project...")
